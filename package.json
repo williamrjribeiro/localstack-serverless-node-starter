@@ -1,0 +1,40 @@
+{
+  "name": "serverless-project-starter",
+  "version": "0.0.1",
+  "description": "A Node.js starter for Serverless Framework with ES6, TypeScript and LocalStack support",
+  "main": "src/handler.js",
+  "scripts": {
+    "test": "serverless-bundle test",
+    "start": "serverless deploy --stage local",
+    "start:offline": "serverless offline start",
+    "hello": "serverless invoke local --function hello",
+    "deploy": "serverless deploy --stage",
+    "sls": "serverless"
+  },
+  "author": "William R. J. Ribeiro - @bill_bsb",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+  },
+  "devDependencies": {
+    "serverless-bundle": "^5.0.2",
+    "serverless-offline": "^8.2.0",
+    "serverless": "^2.61.0",
+    "serverless-deployment-bucket": "^1.5.1",
+    "serverless-localstack": "^0.4.35",
+    "serverless-plugin-common-excludes": "^4.0.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "typescript",
+    "javascript",
+    "es6",
+    "nodejs",
+    "serverless",
+    "localstack",
+    "docker",
+    "aws",
+    "lambda"
+  ]
+}

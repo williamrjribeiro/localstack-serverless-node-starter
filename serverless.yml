@@ -1,0 +1,42 @@
+# NOTE: update this with your service name
+service: serverless-project-starter
+frameworkVersion: "2"
+configValidationMode: error
+variablesResolutionMode: "20210326"
+useDotenv: true
+
+# Create an optimized package for our functions 
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle # Package our functions with Webpack
+  - serverless-offline
+  - serverless-localstack
+  - serverless-deployment-bucket
+  - serverless-plugin-common-excludes
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'local'}
+  region: us-east-1
+  lambdaHashingVersion: "20201221"
+  deploymentBucket:
+    name: ${self:service}-deployment-bucket
+  environment:
+   REPLY_MSG: ${env:REPLY_MSG}
+
+functions:
+  hello:
+    handler: src/hello.handler
+    events:
+      - http:
+          path: hello
+          method: get
+
+custom:
+  localstack:
+    stages:
+      - local
+    debug: false
