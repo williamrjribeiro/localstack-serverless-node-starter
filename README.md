@@ -30,7 +30,7 @@ A Serverless starter that adds ES6, TypeScript, serverless-offline, linting, env
 To create a new Serverless project.
 
 ```bash
-$ serverless install --url https://github.com/AnomalyInnovations/serverless-nodejs-starter --name my-project
+$ serverless install --url https://github.com/williamrjribeiro/serverless-project-starter --name my-project
 ```
 
 Enter the new directory
