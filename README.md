@@ -42,6 +42,7 @@ $ cd my-project
 Install the Node.js packages. Use Node `v14` preferably since it's the runtime version used in AWS.
 
 ```bash
+$ nvm use # run this only if you already have NVM in your machine
 $ npm install
 ```
 
