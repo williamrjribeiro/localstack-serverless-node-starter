@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: serverless-project-starter
+service: localstack-serverless-node-starter
 frameworkVersion: "2"
 configValidationMode: error
 variablesResolutionMode: "20210326"

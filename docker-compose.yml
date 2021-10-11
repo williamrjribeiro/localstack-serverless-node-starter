@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   localstack:
-    container_name: "${LOCALSTACK_DOCKER_NAME-serverless-project-starter}"
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack-serverless-node-starter}"
     image: localstack/localstack:0.12.18
     ports:
       - "4566-4599:4566-4599"
